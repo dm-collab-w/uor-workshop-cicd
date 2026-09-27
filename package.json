@@ -1,0 +1,16 @@
+{
+  "name": "cicd-workshop",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "preinstall": "node scripts/check-node.js",
+    "test": "node --test tests/utils.test.js",
+    "start": "node scripts/serve.js",
+    "build": "node --check src/main.js && node --check src/utils.js && node scripts/build.js",
+    "preview": "node scripts/serve.js dist"
+  }
+}
